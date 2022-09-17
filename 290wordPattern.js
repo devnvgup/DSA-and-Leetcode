@@ -18,17 +18,3 @@ var wordPattern = function (pattern, s) {
 let pattern = "abba";
 let s = "dog cat cat fish";
 
-console.log(wordPattern(pattern, s))
-
-
-console.log("hello world")
-
-
-console.log("I love my ")
-
-
-function add(a,b){
-    return a+b
-}
-
-console.log(add(3,100))
