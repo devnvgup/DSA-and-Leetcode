@@ -3,3 +3,5 @@
 -Sort(MergeSort,Selection Sort,Insersion Sort, Bubble Sort)
 -Linked List(dodubly LinkedList, singly LinkedList)
 -Hash table
+-Stack
+-Queue

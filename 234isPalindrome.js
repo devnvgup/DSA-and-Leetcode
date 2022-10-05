@@ -17,7 +17,7 @@ let node3= new NodeList(2)
 let node4= new NodeList(1)
 
 node1.next=node2;node2.next=node3;node3.next=node4
-solutuion 1
+//solutuion 1
 var isPalindrome = function(head) {
     let node=head
     let newArr=[]
@@ -41,7 +41,7 @@ var isPalindrome = function(head) {
 };
 
 
-solution 2
+//solution 2
 
 var isPalindrome = function(head) {
     let node=head
