@@ -1,4 +1,4 @@
-var mergeTwoLists = function (l1, l2) {
+var mergeTwoLists = function (list1, list2) {
   if (list1 == null || list2 == null) return list1 || list2;
   let nullNode = { val: 0, next: null };
   let newL = nullNode;
@@ -17,14 +17,34 @@ var mergeTwoLists = function (l1, l2) {
   newL.next = curr1 || curr2;
   return nullNode.next;
 };
-class ListNode {
+class ListNode { 
   constructor(val) {
     this.val = val;
     this.next = null;
   }
 }
-let list1 = [1, 2, 4]
-let list2 = [1, 3, 4];
-let listNode1 = new ListNode(list1);
-let listNode2 = new ListNode(list2);
-console.log(mergeTwoLists(listNode1, listNode2));
+//[1,2,4] [1,3,4]
+class LinkedList {
+  constructor(head=null){
+    this.head=head
+  }
+}
+let node1=new ListNode(1)
+let node2= new ListNode(2)
+let node3= new ListNode(4)
+
+node1.next=node2
+node2.next=node3
+
+let node4= new ListNode(1)
+let node5= new ListNode(3)
+let node6= new ListNode(4)
+
+node4.next=node5
+node5.next=node6
+
+
+
+let listNode1 = new LinkedList(node1);
+let listNode2 = new LinkedList(node4);
+console.log(mergeTwoLists(listNode1.head, listNode2.head));
