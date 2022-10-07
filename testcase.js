@@ -28,23 +28,26 @@ node6.next=node7
 
 let listed=new LinkedList(node1)
 
-var removeElements = function(head, val) {
-    let curNode=head
+
+function test(head){
     let nullNode=new NodeList(0)
-    let tmpNode=null
-    tmpNode=nullNode
-    while(curNode){
-        if(curNode.val != val){
-            tmpNode.next=curNode
-            tmpNode=curNode
-        }
-        curNode=curNode.next
-    }
-    tmpNode.next=null
-    return nullNode.next
-};
+    let newL=nullNode
+    // newL.next=head
+    // console.log(newL)
+    // newL=new NodeList(10)
+    // console.log(newL)
+    // head=head.next
+    // newL.next=head
+    // console.log(newL)
+    // console.log(nullNode)
+    newL.next=head
+    newL=new NodeList(100)
+    head=head.next
+    newL.next=head
+    newL=new NodeList(99)
+    head=head.next
+    newL.head=head
+    console.log(nullNode)
 
-
-console.log(removeElements(listed.head,6))
-
-
+}
+test(listed.head)
