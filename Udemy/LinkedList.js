@@ -7,7 +7,7 @@ class LinkedList {
     this.head = newNode;
     this.tail = this.head;
     this.length = 1;
-  }
+  } 
   push(value) {
     const newNode = new Node(value);
     if (!this.head) {
