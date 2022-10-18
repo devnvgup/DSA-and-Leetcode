@@ -1,8 +1,10 @@
+//Breadth First Search
+
 class Node {
     constructor(value) {
-        this.value = value;
-        this.left = null;
-        this.right = null;
+        this.value = value
+        this.left = null
+        this.right = null
     }
 }
 
@@ -34,27 +36,28 @@ class BST {
             }
         }
     }
-    contains(value) {
-        if (this.root === null) return false
-        let tmp = this.root
-        while (tmp) {
-            if (value < tmp.value) {
-                tmp = tmp.left
-            } else if (value > tmp.value) {
-                tmp = tmp.right
-            } else {
-                return true
-            }
+    BFS() {
+        let currentNode = this.root
+        let queue = []
+        let result = []
+        queue.push(currentNode)
+        while (queue.length) {
+            currentNode = queue.shift()
+            result.push(currentNode.value)
+            if (currentNode.left) queue.push(currentNode.left)
+            if (currentNode.right) queue.push(currentNode.right)
         }
-        return false
-    }
-    minValueNode(currentNode) {
-        while (currentNode.left !== null) {
-             f = currentNode.left
-        }
-        return currentNode
+        return result
     }
 }
 
+const tree = new BST()
+tree.insert(47)
+tree.insert(21)
+tree.insert(76)
+tree.insert(18)
+tree.insert(27)
+tree.insert(52)
+tree.insert(82)
 
-
+console.log(tree.BFS())
