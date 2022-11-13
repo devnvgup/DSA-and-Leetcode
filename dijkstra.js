@@ -12,7 +12,7 @@ function dijkstra(graph) {
     let distance = []
     let previous = []
     let start = 0
-    let finish = 2
+    let finish = 4
     let oo = Number.MAX_SAFE_INTEGER
 
     for (let i = 0; i < n; i++) {
